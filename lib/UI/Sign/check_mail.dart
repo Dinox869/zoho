@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:zoho_wines/UI/Sign/new_password.dart';
 
 class check_mail extends StatelessWidget
 {
@@ -74,24 +75,32 @@ class check_mail extends StatelessWidget
                         )
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('or ',
-                        style: TextStyle(
-                          color: Colors.black45,
-                          fontSize: 12,
-                          fontFamily: 'Poppins',
-                        ),
-                        ),
-                        Text('try another email address',
+                    GestureDetector(
+                      onTap: ()
+                      {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                        new_password()
+                        ));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('or ',
                           style: TextStyle(
-                            color: Color(0xFFD60042),
+                            color: Colors.black45,
                             fontSize: 12,
                             fontFamily: 'Poppins',
                           ),
-                        )
-                      ],
+                          ),
+                          Text('try another email address',
+                            style: TextStyle(
+                              color: Color(0xFFD60042),
+                              fontSize: 12,
+                              fontFamily: 'Poppins',
+                            ),
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zoho_wines/UI/Intro/alcohol.dart';
 import 'package:zoho_wines/UI/Sign/create_account.dart';
 import 'package:zoho_wines/UI/Sign/sign_in.dart';
 
@@ -95,7 +96,13 @@ class home extends State<MyHomePage>
               child: RaisedButton(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 color: Color(0xFF4285F4),
-                onPressed: () {},
+                onPressed: () {
+                  //navigate to intro
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                      alcohol()
+                  ));
+
+                },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
