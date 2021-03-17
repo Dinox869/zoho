@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:zoho_wines/UI/Sign/reset_password.dart';
 
 //class sign_in extends StatelessWidget
 //{
@@ -136,15 +137,25 @@ class sign_in extends StatelessWidget
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(right:25.0,top: 5),
-                  child: Text('Forgot Password',
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontFamily: 'Poppins',
-                    color: Color(0xFFD60042),
-                    fontWeight: FontWeight.bold
-                  ),
+                GestureDetector(
+                  onTap: ()
+                  {
+
+                    //navigate to reset page
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                    reset()
+                    ));
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(right:25.0,top: 5),
+                    child: Text('Forgot Password',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontFamily: 'Poppins',
+                      color: Color(0xFFD60042),
+                      fontWeight: FontWeight.bold
+                    ),
+                    ),
                   ),
                 ),
               ],

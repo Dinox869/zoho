@@ -49,6 +49,8 @@ flutter:
     - assets/images/wines.png
     - assets/images/Vector.png
     - assets/images/Vector1.png
+    - assets/images/back.png
+    - assets/images/zoho_pic.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

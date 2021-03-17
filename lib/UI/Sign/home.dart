@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zoho_wines/UI/Sign/create_account.dart';
 import 'package:zoho_wines/UI/Sign/sign_in.dart';
 
 class MyHomePage extends StatefulWidget
@@ -174,7 +175,7 @@ class home extends State<MyHomePage>
                   onPressed: () {
                     //nav to email page
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>
-                        sign_in()
+                        create_account()
                     ));
                   },
                   child: Padding(
