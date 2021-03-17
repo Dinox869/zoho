@@ -101,7 +101,6 @@ class home extends State<MyHomePage>
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>
                       alcohol()
                   ));
-
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

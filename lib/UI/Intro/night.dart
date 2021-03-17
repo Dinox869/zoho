@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:group_button/group_button.dart';
+import 'package:zoho_wines/UI/Home/Home_page.dart';
+import 'package:zoho_wines/UI/Home/bottomNav.dart';
 
 
 class night extends StatefulWidget
@@ -98,7 +100,16 @@ class Night extends State<night>
                       ),
                     ),
                     SizedBox(width: 5),
-                    Checkbox(value:checker , onChanged: null)
+                    Checkbox(
+                        value:checker ,
+                        checkColor: Colors.white,
+                        activeColor: Colors.lightGreen,
+                        onChanged:(bool newValue){
+                      setState(() {
+                      checker = newValue;
+                      });
+                    }
+                  )
                   ],
                 ),
                 SizedBox(height: 25),
@@ -108,7 +119,9 @@ class Night extends State<night>
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                     color: Color(0xFFD60042),
                     onPressed: () {
-
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                          bottomNav()
+                      ));
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
