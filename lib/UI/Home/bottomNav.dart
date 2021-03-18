@@ -3,6 +3,7 @@ import 'package:zoho_wines/UI/Home/FABBottomAppBarItem.dart';
 import 'package:zoho_wines/UI/Home/FabWithIcons.dart';
 import 'package:zoho_wines/UI/Home/Home_page.dart';
 import 'package:zoho_wines/UI/Home/layout.dart';
+import 'package:zoho_wines/UI/Profile/profile.dart';
 
 
 class bottomNav extends StatefulWidget
@@ -16,14 +17,15 @@ class BottomNav extends State<bottomNav>
 
   int _currentIndex = 0;
   final List<Widget> _children = [
-    Home_page(),
-    Home_page(),
-    Home_page(),
-    Home_page(),
+    profile(),
+    profile(),
+    profile(),
+    profile(),
   ];
 
   void onTabTapped(int index) {
     setState(() {
+      print('its tapped');
       _currentIndex = index;
     });
   }
@@ -41,12 +43,11 @@ class BottomNav extends State<bottomNav>
   @override
   Widget build(BuildContext context) {
  return Scaffold(
-   body:   _children[_currentIndex],
+   body:   profile(),
    bottomNavigationBar: FABBottomAppBar(
      color: Colors.black38,
      selectedColor: Color(0xFFD60042),
      onTabSelected: onTabTapped,
-//     currentIndex: _currentIndex,
      items: [
        FABBottomAppBarItem(
        iconData: Icons.home, text: ''
