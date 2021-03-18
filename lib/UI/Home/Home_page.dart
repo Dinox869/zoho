@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zoho_wines/UI/Knowledge/knowledge_section.dart';
 
 class Home_page extends StatefulWidget
 {
@@ -23,7 +24,7 @@ class home extends State<Home_page>
         child: Container(
           child: Column(
             children: [
-              SizedBox(height: 30),
+              SizedBox(height: 35),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -31,7 +32,7 @@ class home extends State<Home_page>
                     padding: EdgeInsets.only(left:10),
                     child:Container(
                       width: MediaQuery.of(context).size.width/1.4,
-                      height: 40,
+                      height: 45,
                       decoration: new BoxDecoration(
                           color: Color(0xFFC4C4C4),
                           borderRadius: new BorderRadius.only(
@@ -69,6 +70,12 @@ class home extends State<Home_page>
                       child: Row(
                         children: [
                           GestureDetector(
+                            onTap: ()
+                            {
+                              Navigator.push(context,MaterialPageRoute(builder: (context)=>
+                              knowledge_section()
+                              ));
+                            },
                             child: Image.asset('assets/images/book.png'),
                           ),
                           IconButton(
@@ -87,7 +94,7 @@ class home extends State<Home_page>
                   itemCount: 4,
                     itemBuilder: (BuildContext ctxt, int index) =>listdisplay(ctxt,index)
                 ),
-              )
+              ),
             ],
           ),
         )

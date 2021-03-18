@@ -67,6 +67,10 @@ flutter:
     - assets/images/cal_grey.png
     - assets/images/person_grey.png
     - assets/images/bucket_grey.png
+    - assets/images/red_bottle.png
+    - assets/images/wine_bottle.png
+    - assets/images/clock.png
+    - assets/images/share.png
 
 
 
