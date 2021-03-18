@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:zoho_wines/UI/Drawer/my_clubs.dart';
+import 'package:zoho_wines/UI/Drawer/my_preferences.dart';
 import 'package:zoho_wines/UI/Drawer/password_update.dart';
 import 'package:zoho_wines/UI/Profile/my_profile.dart';
 
@@ -81,6 +83,12 @@ class Profile extends State<profile>
               ),
               //myclub
               ListTile(
+                onTap: ()
+                {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                      my_clubs()
+                  ));
+                },
                 title: Text('My clubs',
                   style: TextStyle(
                       color: Colors.black38,
@@ -130,6 +138,12 @@ class Profile extends State<profile>
               ),
               //my wine
               ListTile(
+                onTap: ()
+                {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                      my_preferences()
+                  ));
+                },
                 title: Text('My wine preferences',
                   style: TextStyle(
                       color: Colors.black38,
