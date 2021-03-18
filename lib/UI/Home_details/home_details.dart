@@ -206,7 +206,7 @@ class Home extends State<home_details>
                 height:MediaQuery.of(context).size.height/1.8,
                 child: ListView.builder(
                     itemCount: 6,
-                    physics: const AlwaysScrollableScrollPhysics(),
+                    physics: ScrollPhysics(),
                     itemBuilder: (BuildContext ctxt, int index) =>listdisplay(ctxt,index)
                 ),
               )

@@ -17,33 +17,23 @@ class BottomNav extends State<bottomNav>
 
   int _currentIndex = 0;
   final List<Widget> _children = [
-    profile(),
-    profile(),
-    profile(),
+    Home_page(),
+    Home_page(),
+    Home_page(),
     profile(),
   ];
 
   void onTabTapped(int index) {
     setState(() {
-      print('its tapped');
+      print('its tapped '+ index.toString());
       _currentIndex = index;
     });
-  }
-
-  Widget _buildFab(BuildContext context) {
-
-    return  FloatingActionButton(
-      onPressed: () { },
-      tooltip: 'Increment',
-      child: Icon(Icons.add),
-      elevation: 2.0,
-    );
   }
 
   @override
   Widget build(BuildContext context) {
  return Scaffold(
-   body:   profile(),
+   body:   _children[_currentIndex],
    bottomNavigationBar: FABBottomAppBar(
      color: Colors.black38,
      selectedColor: Color(0xFFD60042),
