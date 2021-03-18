@@ -12,8 +12,8 @@ class know_sec extends State<knowledge_section>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
+      body: Wrap(
+        children: [Container(
           color: Color(0xFFC4C4C4),
           child: Column(
             children: [
@@ -63,11 +63,11 @@ class know_sec extends State<knowledge_section>{
                         child: Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: Text('5 Perfect Picnic wines, according to a wine expert from Kenya || By Victoria Munywoki',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Poppins',
-                            fontSize: 13
-                          ),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontSize: 13
+                            ),
                           ),
                         ),
                       ),
@@ -76,9 +76,10 @@ class know_sec extends State<knowledge_section>{
                 ),
               ),
               Container(
+                padding: EdgeInsets.only(bottom: 10),
                 color: Colors.white,
                 width: MediaQuery.of(context).size.width/1,
-                height: 500,
+                height:MediaQuery.of(context).size.height/1.8,
                 child: ListView.builder(
                     itemCount: 6,
                     itemBuilder: (BuildContext ctxt, int index) =>listdisplay(ctxt,index)
@@ -87,7 +88,8 @@ class know_sec extends State<knowledge_section>{
 
             ],
           ),
-        ),
+        )
+        ],
       ),
     );
   }
@@ -155,7 +157,6 @@ class know_sec extends State<knowledge_section>{
                         Padding(
                           padding: const EdgeInsets.only(right:10.0,top: 4),
                           child:Icon(Icons.share,color: Color(0xFF62103B),size: 14,)
-//                        Image.asset('assets/images/share.png'),
                         )
                     ],
                   ),
